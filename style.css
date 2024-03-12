@@ -1,0 +1,264 @@
+@import url();
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body {
+    background-color: black;
+}
+
+h1 {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+p {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h2 {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.kodchasan-extralight-italic {
+    font-family: "Kodchasan", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+
+  
+
+footer {
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-flow: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 4em;
+    background-color: #254441;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+nav h1 {
+    margin: 0%;
+    padding: 1.5%;
+    font-size: xx-large;
+    color: #0b1413;
+}
+
+nav a {
+    margin: 0%;
+}
+
+.nav-wrapper-2 {
+    height: 4.5em;
+    background-color: rgb(255, 111, 89);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.nav-wrapper {
+    height: 5em;
+    background-color: #DB504A;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.image-container {
+    display: flex;
+    background-image: url(Images/headerback.png);
+    background-size: cover;
+    height: 50em;
+    width: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-container h2 {
+    width: fit-content;
+    position: absolute;
+    color: white;
+}
+
+.line_break {
+    width: 100%;
+    background-color:#3A6E69;
+}
+.end-break{
+    background-color: black;
+}
+
+.side-lines {
+    height: 90vh;
+    width: 5px;
+    margin: .1em .3em .5em .3em;
+    border-radius: 5px;
+    background-color: rgb(255, 111, 89);
+}
+
+.line2 {
+    margin-top: .9em;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    margin-bottom: 1em;
+}
+
+.important {
+    background-color: rgba(0, 0, 0, 0.236);
+    border-radius: 15px;
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+    margin: 0;
+    align-self: flex-end;
+    padding-bottom: 1em;
+    margin-top: 5em;
+}
+
+.important h3 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5em;
+}
+
+.important p {
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+
+.wrapper {
+    display: flex;
+    background-color:#3A6E69;
+}
+
+.taken-out{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    text-align: center;
+}
+
+.taken-out h2 {
+
+}
+
+form {
+    display: flex;
+    border: 5px solid #254441;
+    width: 20%;
+    border-radius: 15px;
+    padding: 1.5em;
+    align-self: center;
+}
+input{
+    background-color: #254441;
+    border: none;
+    border-radius: 5px;
+    width: 15dvw;
+    height: 2em;
+}
+
+.aside-img {
+    align-self: center;
+}
+
+footer {
+    padding: 3%;
+}
+
+#pie-chart {
+}
+
+#submitBtn{
+    background-color: rgb(255, 109, 87);
+    border: 3px solid #0b1413;
+    border-radius: 8em;
+    width: 7em;
+    margin-top: 1em;
+    text-align: center;
+}
+
+label{
+    color: white;
+}
+
+/* ------------------------------------------------------------
+                            MOBILE
+--------------------------------------------------------------- */
+
+
+@media only screen and (max-width: 767px) {
+
+    body {
+        margin: 0
+    }
+    
+    p {
+        font-size: larger
+    }
+    
+    .important {
+        display: none;
+    }
+    
+    footer {
+        align-items: center;
+    }
+    
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .taken-out {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    form {
+        padding: 0;
+        margin: 0;
+        width: 95%;
+        margin-bottom: 5dvh;
+        margin-top: 5dvh;
+    }
+    
+    .side-lines {
+        display: none;
+    }
+    
+    .aside-img {
+        display: none;
+    }
+
+    input{
+        background-color: #254441;
+        border: none;
+        border-radius: 5px;
+        width: 50dvw;
+        height: 2em;
+    }
+    
+    }

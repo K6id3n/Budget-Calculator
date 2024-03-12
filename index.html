@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <section class="nav-wrapper">
+            <section class="nav-wrapper-2">
+
+                <nav>
+                    <h1>Budget Calculator</h1>
+                </nav>
+
+            </section>
+        </section>
+    </header>
+
+    <section>
+        <section class="image-container">
+
+            <h2 class="kodchasan-extralight-italic">An in-depth budget, at the click of a button.</h2>
+
+        </section>
+    </section>
+
+    <div class="line_break">
+        <img src="Images/Line_Break.png" alt="Line Break" class="line_break">
+    </div>
+
+    <section class="wrapper">
+        <div class="side-lines"></div>
+        <div class="side-lines line2"></div>
+        <section class="taken-out">
+
+            <h1>Whats Taken Out?</h1>
+
+            <section >
+
+                <div class="pie-chart">
+                    <canvas id="myChart" style="width: 130%; height: 130%;"></canvas>
+                </div>
+
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+                <script>
+                    const ctx = document.getElementById('myChart');
+
+                    new Chart(ctx, {
+                        type: 'doughnut',
+                        data: {
+                            labels: ['Tax', 'Necessities', 'Free Money'],
+                            datasets: [{
+                                label: '$',
+                                data: [12, 19, 3],
+                                borderWidth: 1,
+                                backgroundColor: [
+                                    'rgb(255, 109, 87)', // Gray
+                                    'rgb(255, 111, 109)', // White
+                                    'rgb(155, 111, 109)'        // Black
+                                ]
+                            }]
+                        },
+                        options: {
+
+                            }
+                        });
+                </script>
+
+
+            </section>
+            <button id="submitBtn">
+                Print Summary
+            </button>
+
+            <section class="important">
+                <h3>Why is budgeting important?</h3>
+
+                <p>
+                    By proactively planning for both anticipated and unforeseen expenses in life, you ensure that
+                    you'll
+                    have
+                    the necessary funds available, without having to rely on costly credit cards or personal loans.
+                    This
+                    approach results in spending significantly less when such expenses arise, avoiding financial
+                    pitfalls,
+                    and enjoying greater peace of mind in your everyday life.
+                    Moreover, budgets can assist in debt reduction and savings accumulation if you incorporate these
+                    goals
+                    into your plan. By creating a long-term financial strategy, you'll have the resources to pursue
+                    both
+                    current desires and future aspirations.
+                </p>
+            </section>
+
+        </section>
+
+        <form>
+
+            <h3>Step 1</h3>
+            <p>
+                In this section, input your yearly gross income and state. Include all sources of earnings like
+                wages,
+                salaries, bonuses, rental income, investments, and any regular money received. Accuracy is key for
+                an
+                effective budget, aiding in proper financial planning and management.
+            </p>
+
+            <!-- Make these dropdowns later -->
+            <label for="state">State</label>
+
+            <input type="number" id="state" name="step1" value="0">
+
+            <label for="year-income">Yearly Income</label>
+            <input type="number" id="year-income" name="step1" value="0">
+
+            <label for="other">Other Income</label>
+            <input type="number" id="other" name="state" value="0">
+
+            <h3>Step 2</h3>
+            <p>
+                In this section, input your monthly expenditures such as rent, utilities, groceries, transportation,
+                entertainment, and other regular costs. Be thorough in listing all expenses to ensure an accurate
+                budget,
+                enabling effective financial planning and management.
+            </p>
+
+            <label for="housing">Housing</label>
+            <input type="number" id="housing" name="step2" value="0">
+
+            <label for="utilities">Utilities</label>
+            <input type="number" id="utilities" name="step2" value="0">
+
+            <label for="transportation">Transportation</label>
+            <input type="number" id="transportation" name="step2" value="0">
+
+            <label for="food">Food</label>
+            <input type="number" id="food" name="step2" value="0">
+
+            <label for="recreation">Recreation</label>
+            <input type="number" id="recreation" name="step2" value="0">
+
+            <label for="savings">Savings</label>
+            <input type="number" id="savings" name="step2" value="0">
+
+            <!-- Make this a dropdown -->
+            <label for="other-ex">Other Expenses</label>
+            <input type="number" id="other-ex" name="step2" value="0">
+
+
+            <section id="submitBtn" onclick="main()">
+                <p>Submit</p>
+            </section>
+        </form>
+
+        <aside class="aside-img">
+
+            <img src="Images/pexels-photo-5780772 1.png" alt="Fist Bump">
+
+        </aside>
+        <div class="side-lines"></div>
+        <div class="side-lines line2"></div>
+    </section>
+
+    <div class="line_break end-break">
+        <img src="Images/Line_Break.png" alt="Line Break" class="line_break">
+    </div>
+
+    <footer>
+        <h2>Credits</h2>
+
+        <ol>
+            <li>James Steed</li>
+            <li>Eric Yang</li>
+            <li>Icarus Wedekind</li>
+            <li>Blas Buensuceso</li>
+            <li>Iris Anzaldo</li>
+            <li>Isaac Lay</li>
+            <li>Leonardo Castillo</li>
+            <li>Lexi Sonephady</li>
+        </ol>
+
+    </footer>
+
+</body>
+
+</html>
